@@ -379,20 +379,12 @@ local globalKeys =
       awful.util.spawn_with_shell('vm-attach attach')
     end
   ),
-  -- Lutris hotkey
-  awful.key(
-    {modkey},
-    'g',
-    function()
-      awful.util.spawn_with_shell('lutris')
-    end
-  ),
   -- System Monitor hotkey
   awful.key(
     {modkey},
     'm',
     function()
-      awful.util.spawn_with_shell('mate-system-monitor')
+      awful.util.spawn_with_shell('gnome-system-monitor')
     end
   ),
   -- Kill VLC
@@ -415,7 +407,7 @@ local globalKeys =
   -- Emoji Picker
   awful.key(
     {modkey},
-    'a',
+    ',',
     function()
       awful.util.spawn_with_shell('ibus emoji')
     end,

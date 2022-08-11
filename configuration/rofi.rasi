@@ -11,10 +11,10 @@ configuration {
 }
 
 * {
-	background-color:            rgb(18, 30, 37);
+	background-color:            rgb(0, 0, 0);
 	text-color:                  #d3d7cf;
-	selbg:                       rgb(0, 86, 136);
-	actbg:                       rgb(22, 37, 46);
+	selbg:                       rgb(0, 0, 0);
+	actbg:                       rgb(0, 0, 0);
 	urgbg:                       #e53935;
 	winbg:			     #26c6da;
 
@@ -45,7 +45,7 @@ configuration {
 window {
 	location:	 west;
 	anchor:		 west;
-	x-offset: 0px;
+	x-offset: 100px;
 	height:		 100%;
 	margin-right: 60px;
 	orientation: horizontal;

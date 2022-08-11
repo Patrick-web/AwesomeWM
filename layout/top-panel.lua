@@ -9,7 +9,8 @@ local mat_icon_button = require('widget.material.icon-button')
 local mat_icon = require('widget.material.icon')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('theme.icons')
-
+local battery_widget = require("widget.battery")
+local ram_widget = require("widget.ram.ram-meter")
 -- Titus - Horizontal Tray
 local systray = wibox.widget.systray()
   systray:set_horizontal(true)
@@ -30,7 +31,7 @@ local month_calendar = awful.widget.calendar_popup.month({
 })
 month_calendar:attach(textclock)
 
-local clock_widget = wibox.container.margin(textclock, dpi(13), dpi(13), dpi(9), dpi(8))
+local clock_widget = wibox.container.margin(textclock, dpi(10), dpi(10), dpi(9), dpi(8))
 
 local add_button = mat_icon_button(mat_icon(icons.plus, dpi(24)))
 add_button:buttons(
@@ -103,8 +104,8 @@ local TopPanel = function(s)
       x = s.geometry.x,
       y = s.geometry.y,
       stretch = false,
-      bg = beautiful.background.hue_800,
-      fg = beautiful.fg_normal,
+      bg = "#00000000",
+      fg = "#ffffff",
       struts = {
         top = dpi(32)
       }
@@ -134,6 +135,7 @@ local TopPanel = function(s)
         LayoutBox(s),
         -- Clock
         clock_widget,
+        battery_widget,
       }
     }
 
