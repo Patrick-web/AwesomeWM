@@ -16,11 +16,12 @@ return {
     region_screenshot = 'flameshot gui -p ~/Pictures',
     delayed_screenshot = 'flameshot screen -p ~/Pictures -d 5000',
     browser = 'firefox',
-    editor = 'gedit', -- gui text editor
+    editor = 'neovim', -- gui text editor
     social = 'discord',
     game = rofi_command,
     files = 'nautilus',
-    music = 'flbmusic'
+    music = 'flbmusic',
+    mail = "missive"
   },
   -- List of apps to start once on start-up
   run_on_start_up = {

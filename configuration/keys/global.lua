@@ -12,10 +12,8 @@ local globalKeys =
   -- Hotkeys
   awful.key({modkey}, 'F1', hotkeys_popup.show_help, {description = 'Show help', group = 'awesome'}),
   -- Tag browsing
-  awful.key({modkey}, 'w', awful.tag.viewprev, {description = 'view previous', group = 'tag'}),
-  awful.key({modkey}, 's', awful.tag.viewnext, {description = 'view next', group = 'tag'}),
-  awful.key({altkey, 'Control'}, 'Up', awful.tag.viewprev, {description = 'view previous', group = 'tag'}),
-  awful.key({altkey, 'Control'}, 'Down', awful.tag.viewnext, {description = 'view next', group = 'tag'}),
+  awful.key({modkey},'Tab', awful.tag.viewnext, {description = 'next tag', group = 'tag'}),
+  awful.key({modkey, 'Shift'},'Tab', awful.tag.viewprev, {description = 'previous tag', group = 'tag'}),
   awful.key({modkey}, 'Escape', awful.tag.history.restore, {description = 'go back', group = 'tag'}),
   -- Default client focus
   awful.key(
@@ -50,22 +48,22 @@ local globalKeys =
     end,
     {description = 'Show main menu', group = 'awesome'}
   ),
-  awful.key(
-    {modkey, 'Shift'},
-    'r',
-    function()
-      awful.spawn('reboot')
-    end,
-    {description = 'Reboot Computer', group = 'awesome'}
-  ),
-  awful.key(
-    {modkey, 'Shift'},
-    's',
-    function()
-      awful.spawn('shutdown now')
-    end,
-    {description = 'Shutdown Computer', group = 'awesome'}
-  ),
+  -- awful.key(
+  --   {modkey, 'Shift'},
+  --   'r',
+  --   function()
+  --     awful.spawn('reboot')
+  --   end,
+  --   {description = 'Reboot Computer', group = 'awesome'}
+  -- ),
+  -- awful.key(
+  --   {modkey, 'Shift'},
+  --   's',
+  --   function()
+  --     awful.spawn('shutdown now')
+  --   end,
+  --   {description = 'Shutdown Computer', group = 'awesome'}
+  -- ),
   awful.key(
     {modkey, 'Shift'},
     'l',

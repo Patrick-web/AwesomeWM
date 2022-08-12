@@ -13,12 +13,13 @@ local battery_widget = require("widget.battery")
 local ram_widget = require("widget.ram.ram-meter")
 local brightness_widget = require("widget.brightness.brightness-slider")
 local harddrive_widget = require("widget.harddrive.harddrive-meter")
+local volume_slider = require("widget.volume.volume-slider")
 
 -- Titus - Horizontal Tray
 local systray = wibox.widget.systray()
   systray:set_horizontal(true)
-  systray:set_base_size(20)
-  systray.forced_height = 20
+  systray:set_base_size(30)
+  systray.forced_height = 30
 
   -- Clock / Calendar 24h format
 -- local textclock = wibox.widget.textclock('<span font="Roboto Mono bold 9">%d.%m.%Y\n     %H:%M</span>')
@@ -141,6 +142,7 @@ local TopPanel = function(s)
         -- LayoutBox(s),
         clock_widget,
         battery_widget,
+        -- volume_slider,
       },
     }
 
