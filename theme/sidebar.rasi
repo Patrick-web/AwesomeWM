@@ -4,7 +4,7 @@
  */
 * {
     text-color:  #ffeedd;
-    background-color:  rgba(0,0,0,0);
+    background-color:  rgba(0,0,0,1);
     dark: #121e25;
     // Black
     black:       #3d352a;
@@ -42,10 +42,10 @@
     highlight:     bold #ffffff;
 }
 window {
-    height:   100%;
+    height:   70%;
     width: 30em;
-    location: west;
-    anchor:   west;
+    location: center;
+    anchor:   center;
     border:  0px 2px 0px 0px;
     text-color: @lightwhite;
 }
@@ -60,26 +60,25 @@ button selected {
     text-color: @lightgreen;
 }
 inputbar {
-    background-color: @lightblack;
+    background-color: @background-color;
     text-color: @lightgreen;
-    padding: 4px;
-    border: 0px 0px 4px 0px;
+    padding: 5px 10px;
 }
 mainbox {
     expand: true;
-    background-color: #121e25;
-    spacing: 1em;
+    background-color: @background-color;
+    spacing: 0em;
 }
 listview {
-    padding: 0em 0.4em 4em 1em;
+    padding: 0em 0em 0em 10px;
     dynamic: false;
     lines: 0;
 }
 element selected  normal {
-    background-color: @lightblue;
+    background-color: rgba(255,255,255,0.2);
 }
 element normal active {
-    text-color: @lightwhite;
+    text-color: rgba(255,255,255,0.2);
 }
 element normal urgent {
     text-color: @lightred;
