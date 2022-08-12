@@ -6,6 +6,8 @@ local beautiful = require('beautiful')
 
 -- Theme
 beautiful.init(require('theme'))
+beautiful.tooltip_fg = beautiful.fg_normal
+beautiful.tooltip_bg = beautiful.bg_normal
 
 
 -- Layout

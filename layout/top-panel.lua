@@ -1,26 +1,27 @@
 local awful = require('awful')
-local beautiful = require('beautiful')
 local wibox = require('wibox')
+local dpi = require('beautiful').xresources.apply_dpi
+local beautiful = require('beautiful')
 local TaskList = require('widget.task-list')
 local TagList = require('widget.tag-list')
 local gears = require('gears')
 local clickable_container = require('widget.material.clickable-container')
 local mat_icon_button = require('widget.material.icon-button')
 local mat_icon = require('widget.material.icon')
-local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('theme.icons')
 local battery_widget = require("widget.battery")
 local ram_widget = require("widget.ram.ram-meter")
+local brightness_widget = require("widget.brightness.brightness-slider")
+local harddrive_widget = require("widget.harddrive.harddrive-meter")
 -- Titus - Horizontal Tray
 local systray = wibox.widget.systray()
   systray:set_horizontal(true)
   systray:set_base_size(20)
   systray.forced_height = 20
-
   -- Clock / Calendar 24h format
 -- local textclock = wibox.widget.textclock('<span font="Roboto Mono bold 9">%d.%m.%Y\n     %H:%M</span>')
 -- Clock / Calendar 12AM/PM fornat
-local textclock = wibox.widget.textclock('<span font="Roboto Mono 12">%I:%M %p</span>')
+local textclock = wibox.widget.textclock('<span font="Roboto Mono 11">%I:%M %p | %d/%m/%Y</span>')
 -- textclock.forced_height = 36
 
 -- Add a calendar (credits to kylekewley for the original code)
@@ -101,7 +102,7 @@ local TopPanel = function(s)
       screen = s,
       height = dpi(32),
       width = s.geometry.width,
-      x = s.geometry.x,
+      x = dpi(50),
       y = s.geometry.y,
       stretch = false,
       bg = "#00000000",
@@ -132,11 +133,10 @@ local TopPanel = function(s)
         layout = wibox.layout.fixed.horizontal,
         wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
         -- Layout box
-        LayoutBox(s),
-        -- Clock
+        -- LayoutBox(s),
         clock_widget,
         battery_widget,
-      }
+      },
     }
 
   return panel
