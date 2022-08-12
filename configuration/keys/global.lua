@@ -12,9 +12,9 @@ local globalKeys =
   -- Hotkeys
   awful.key({modkey}, 'F1', hotkeys_popup.show_help, {description = 'Show help', group = 'awesome'}),
   -- Tag browsing
-  awful.key({modkey},'Tab', awful.tag.viewnext, {description = 'next tag', group = 'tag'}),
-  awful.key({modkey, 'Shift'},'Tab', awful.tag.viewprev, {description = 'previous tag', group = 'tag'}),
-  awful.key({modkey}, 'Escape', awful.tag.history.restore, {description = 'go back', group = 'tag'}),
+  awful.key({modkey},'Tab', awful.tag.history.restore, {description = 'recent tag', group = 'tag'}),
+  awful.key({modkey}, 'Left', awful.tag.viewprev, {description = 'previous tag', group = 'tag'}),
+  awful.key({modkey}, 'Right', awful.tag.viewnext, {description = 'next tab', group = 'tag'}),
   -- Default client focus
   awful.key(
     {modkey},
