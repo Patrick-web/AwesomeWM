@@ -66,15 +66,15 @@ local awesome_overrides =
   -- Taglist
 
   theme.taglist_bg_empty = '#00000000'
-  theme.taglist_bg_occupied = '#00000000'
-  theme.taglist_bg_urgent = '#00000000'
+  theme.taglist_bg_occupied = '#ffffff33'
+  theme.taglist_bg_urgent = '#faff0085'
   theme.taglist_bg_focus = '#000000'
 
   -- Tasklist
 
   theme.tasklist_font = 'Roboto medium 11'
   theme.tasklist_bg_normal = '#00000980'
-  theme.tasklist_bg_focus = '#00000980'
+  theme.tasklist_bg_focus = '#000'
     -- 'linear:0,0:0,' ..
     -- dpi(40) ..
     --   ':0,' ..
