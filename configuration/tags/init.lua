@@ -35,11 +35,18 @@ local tags = {
     screen = 1
   },
   {
-    icon = icons.lab,
+    icon = icons.six,
     type = 'any',
-    defaultApp = apps.default.rofi,
+    defaultApp = apps.default.applications,
+    screen = 1
+  },
+  {
+    icon = icons.seven,
+    type = 'any',
+    defaultApp = apps.default.applications,
     screen = 1
   }
+
 }
 
 awful.layout.layouts = {

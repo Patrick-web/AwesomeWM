@@ -68,7 +68,7 @@ local awesome_overrides =
   theme.taglist_bg_empty = '#00000000'
   theme.taglist_bg_occupied = '#ffffff33'
   theme.taglist_bg_urgent = '#faff0085'
-  theme.taglist_bg_focus = '#000000'
+  theme.taglist_bg_focus = '#fff'
 
   -- Tasklist
 

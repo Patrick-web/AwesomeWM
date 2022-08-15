@@ -33,18 +33,10 @@ local globalKeys =
     {description = 'Focus previous by index', group = 'client'}
   ),
   awful.key(
-    {modkey},
-    'r',
-    function()
-      awful.spawn('rofi -combi-modi window,drun -show combi -modi combi')
-    end,
-    {description = 'Main menu', group = 'awesome'}
-  ),
-  awful.key(
     {altkey},
     'space',
     function()
-      awful.spawn('rofi -combi-modi window,drun -show combi -modi combi')
+      awful.spawn('/home/jp/.config/rofi/scripts/rofi_3')
     end,
     {description = 'Show main menu', group = 'awesome'}
   ),
@@ -155,7 +147,7 @@ local globalKeys =
     end,
     {description = 'Open a terminal', group = 'launcher'}
   ),
-  awful.key({modkey, 'Control'}, 'r', _G.awesome.restart, {description = 'reload awesome', group = 'awesome'}),
+  awful.key({modkey}, 'r', _G.awesome.restart, {description = 'reload awesome', group = 'awesome'}),
   awful.key({modkey, 'Control'}, 'q', _G.awesome.quit, {description = 'quit awesome', group = 'awesome'}),
   awful.key(
     {altkey, 'Shift'},
@@ -385,12 +377,12 @@ local globalKeys =
       awful.util.spawn_with_shell('gnome-system-monitor')
     end
   ),
-  -- Kill VLC
+  -- Kill Window
   awful.key(
-    {modkey},
+    {altkey},
     'v',
     function()
-      awful.util.spawn_with_shell('killall -9 vlc')
+      awful.util.spawn('kill -9 ' .. get_xproperty("_NET_WM_PID(CARDINAL)"))
     end
   ),
   -- File Manager
