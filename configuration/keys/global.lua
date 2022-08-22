@@ -380,7 +380,7 @@ local globalKeys =
   -- Kill Window
   awful.key(
     {altkey},
-    'v',
+    '<F4>',
     function()
       awful.util.spawn('kill -9 ' .. get_xproperty("_NET_WM_PID(CARDINAL)"))
     end

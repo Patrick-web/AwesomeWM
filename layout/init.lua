@@ -14,7 +14,7 @@ awful.screen.connect_for_each_screen(
 )
 
 -- Hide bars when app go fullscreen
-function updateBarsVisibility()
+function updateBarsVisibility(screen)
   for s in screen do
     if s.selected_tag then
       local fullscreen = s.selected_tag.fullscreenMode
