@@ -29,7 +29,7 @@ _G.root.keys(require('configuration.keys.global'))
 
 -- {{{ Screen
 -- Reset wallpaper when a screen's geometry changes (e.g. different resolution)
-screen.connect_signal( "property::geometry", function(s) beautiful.wallpaper.maximized( beautiful.wallpaper, s, beautiful.wallpapers) end )
+-- screen.connect_signal( "property::geometry", function(s) beautiful.wallpaper.maximized( beautiful.wallpaper, s, beautiful.wallpapers) end )
 
 -- Signal function to execute when a new client appears.
 _G.client.connect_signal(
@@ -49,14 +49,12 @@ _G.client.connect_signal(
 )
 
 -- Enable sloppy focus, so that focus follows mouse.
---[[
 _G.client.connect_signal(
   'mouse::enter',
   function(c)
     c:emit_signal('request::activate', 'mouse_enter', {raise = true})
   end
 )
---]]
 
 -- Make the focused window have a glowing border
 _G.client.connect_signal(
@@ -71,3 +69,4 @@ _G.client.connect_signal(
     c.border_color = beautiful.border_normal
   end
 )
+

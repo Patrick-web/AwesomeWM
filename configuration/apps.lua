@@ -29,7 +29,7 @@ return {
   -- List of apps to start once on start-up
   run_on_start_up = {
     'xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1',
-    'compton --config ' .. filesystem.get_configuration_dir() .. '/configuration/compton.conf',
+    'picom --config ' .. filesystem.get_configuration_dir() .. '/configuration/picom.conf',
     'nm-applet --indicator', -- wifi
     'pnmixer', -- shows an audiocontrol applet in systray when installed.
     'blueberry-tray', -- Bluetooth tray icon
@@ -38,6 +38,7 @@ return {
     'xfce4-power-manager', -- Power manager
     'nitrogen --random --set-zoom-fill /home/jp/Pictures/Wallpapers',
     '/usr/bin/variety',
+    'bash /home/jp/.screenlayout/arandrScript.sh',
     'guake',
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script
