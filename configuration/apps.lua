@@ -18,8 +18,8 @@ return {
     screenshot = 'flameshot screen -p ~/Pictures',
     region_screenshot = 'flameshot gui -p ~/Pictures',
     delayed_screenshot = 'flameshot screen -p ~/Pictures -d 5000',
-    browser = 'firefox',
-    editor = 'neovim', -- gui text editor
+    browser = 'brave',
+    editor = 'code', -- gui text editor
     social = 'discord',
     game = rofi_command,
     files = 'nautilus',
