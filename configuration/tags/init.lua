@@ -29,9 +29,9 @@ local tags = {
     screen = 1
   },
   {
-    icon = icons.mail,
-    type = "mail",
-    defaultApp =  apps.default.mail,
+    icon = icons.obsidian,
+    type = "obsidian",
+    defaultApp = apps.default.obsidian,
     screen = 1
   },
   {

@@ -10,6 +10,7 @@ return {
   game = dir .. '/google-controller.svg',
   lab = dir .. '/flask.svg',
   mail = dir .. '/gnome-gmail.svg',
+  obsidian = dir .. '/obsidian.svg',
   six = dir .. '/six.svg',
   seven = dir .. '/seven.svg',
   --others

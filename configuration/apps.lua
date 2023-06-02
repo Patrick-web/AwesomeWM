@@ -3,7 +3,13 @@ local filesystem = require('gears.filesystem')
 -- Thanks to jo148 on github for making rofi dpi aware!
 local with_dpi = require('beautiful').xresources.apply_dpi
 local get_dpi = require('beautiful').xresources.get_dpi
-local rofi_command = 'env /usr/bin/rofi -dpi ' .. get_dpi() .. ' -width ' .. with_dpi(400) .. ' -show drun -theme ' .. filesystem.get_configuration_dir() .. '/configuration/rofi.rasi -run-command "/bin/bash -c -i \'shopt -s expand_aliases; {cmd}\'"'
+local rofi_command = 'env /usr/bin/rofi -dpi ' ..
+get_dpi() ..
+' -width ' ..
+with_dpi(400) ..
+' -show drun -theme ' ..
+filesystem.get_configuration_dir() ..
+'/configuration/rofi.rasi -run-command "/bin/bash -c -i \'shopt -s expand_aliases; {cmd}\'"'
 
 local apps_menu = "rofi_3"
 
@@ -24,18 +30,19 @@ return {
     game = rofi_command,
     files = 'nautilus',
     music = 'flbmusic',
-    mail = "missive"
+    mail = "missive",
+    obsidian = "flatpak run md.obsidian.Obsidian"
   },
   -- List of apps to start once on start-up
   run_on_start_up = {
     'xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1',
     'picom --config ' .. filesystem.get_configuration_dir() .. '/configuration/picom.conf',
-    'nm-applet --indicator', -- wifi
-    'pnmixer', -- shows an audiocontrol applet in systray when installed.
-    'blueberry-tray', -- Bluetooth tray icon
-    'numlockx on', -- enable numlock
+    'nm-applet --indicator',                                                                                                           -- wifi
+    'pnmixer',                                                                                                                         -- shows an audiocontrol applet in systray when installed.
+    'blueberry-tray',                                                                                                                  -- Bluetooth tray icon
+    'numlockx on',                                                                                                                     -- enable numlock
     '/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
-    'xfce4-power-manager', -- Power manager
+    'xfce4-power-manager',                                                                                                             -- Power manager
     'nitrogen --random --set-zoom-fill /home/jp/Pictures/Wallpapers',
     '/usr/bin/variety',
     'bash /home/jp/.screenlayout/arandrScript.sh',
